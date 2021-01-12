@@ -21,7 +21,6 @@ namespace CESystem.Tests.ControllerTests
 {
     public class UserControllerTests
     {
-        private readonly ITestOutputHelper _testOutputHelper;
         private readonly Mock<ILogger<Startup>> _loggerMock;
         private readonly Mock<LocalDbContext> _dbMock;
         private readonly Mock<IUserService> _userServiceMock;
@@ -29,7 +28,6 @@ namespace CESystem.Tests.ControllerTests
         
         public UserControllerTests(ITestOutputHelper testOutputHelper)
         {
-            _testOutputHelper = testOutputHelper;
             _loggerMock = new Mock<ILogger<Startup>>();
             _dbMock = new Mock<LocalDbContext>(new DbContextOptions<LocalDbContext>());
             _userServiceMock = new Mock<IUserService>();
